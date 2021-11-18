@@ -3,6 +3,7 @@ import CharacterList from './components/CharacterList.js';
 import axios from 'axios';
 import './App.css';
 import PageBar from './components/PageBar';
+import Search from './components/Search.js';
 
 function App() {
   const [items, setItems] = useState([]);
@@ -23,10 +24,11 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div className="pb-3" >
       <h1 className="header">Star Wars characters!</h1>
       <PageBar setItems={setItems} />
-      {!items ? <p>Loading...</p> : items.map((item) => {
+      <Search setItems={setItems} />
+      {items.length < 1 ? <p className="loading">Loading...</p> : items.map((item) => {
         return <CharacterList key={item.name} item={item} />
       })}
     </div>

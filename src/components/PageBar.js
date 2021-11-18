@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import ReactPaginate from 'react-paginate';
+import './PageBar.css';
 
 function PageBar({ setItems }) {
 
@@ -21,7 +22,7 @@ function PageBar({ setItems }) {
   };
 
   return (
-    <div>
+    <div className="page-selector">
       <ReactPaginate 
         previousLabel={'prev'} 
         marginPagesDisplayed={5}
