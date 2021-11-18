@@ -18,7 +18,7 @@ function Search({ setItems }) {
         placeholder="Search"
         onChange={e => {setSearchTerm(e.target.value)}}
       />
-      <button className="btn btn-primary btn-sm" onClick={search} >Search!</button>
+      <button className="btn btn-primary btn-sm shadow-none" onClick={search} >Search!</button>
     </div>
   );
 };

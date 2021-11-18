@@ -22,10 +22,11 @@ function PageBar({ setItems }) {
   };
 
   return (
-    <div className="page-selector">
+    <div className="page-selector col-md-7 mx-auto">
       <ReactPaginate 
-        previousLabel={'prev'} 
-        marginPagesDisplayed={5}
+        previousLabel={'<<'} 
+        nextLabel={'>>'}
+        marginPagesDisplayed={4}
         pageCount={9} 
         containerClassName={'pagination justify-content-center'}
         pageClassName={'page-item'}
