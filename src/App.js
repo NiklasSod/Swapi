@@ -15,7 +15,6 @@ function App() {
         const response = await axios.get(`https://swapi.dev/api/people/?page=${page}`);
         const data = response.data.results;
         setItems(data);
-        console.log(data);
       } catch (error) {
         console.error(error);
       }
@@ -24,13 +23,16 @@ function App() {
   }, []);
 
   return (
-    <div className="pb-3" >
+    <div className="container pb-3" >
       <h1 className="header">Star Wars characters!</h1>
       <PageBar setItems={setItems} />
       <Search setItems={setItems} />
-      {items.length < 1 ? <p className="loading">Loading...</p> : items.map((item) => {
-        return <CharacterList key={item.name} item={item} />
-      })}
+      <div className="row col-md-7 mx-auto">
+        {items.length < 1 ? <p className="loading">Loading...</p> : items.map((item) => {
+          return <CharacterList key={item.name} item={item} />
+        })}
+      </div>
+
     </div>
   );
 };

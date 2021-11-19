@@ -14,7 +14,6 @@ function PageBar({ setItems }) {
     try {
       const response = await axios.get(`https://swapi.dev/api/people/?page=${currentPage}`);
       const data = response.data.results;
-      console.log(data);
       setItems(data);
     } catch (error) {
       console.error(error);

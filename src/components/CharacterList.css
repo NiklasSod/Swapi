@@ -2,7 +2,35 @@
   text-align: center;
 }
 
-.starsInMovies {
+.info-body {
+  position: relative;
+  background-image: url("../img/space.jpg");
+}
+
+.character-information-1 {
+  font-weight: 700;
+  letter-spacing: 0.07rem;
+  font-size: 1rem;
+  color: rgb(212, 6, 6);
+}
+
+.character-information-2 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: rgb(255, 68, 230);
+  position: absolute;
+  right: 1rem;
+  bottom: 0.1rem;
+  text-align: end;
+}
+
+.character-information-3 {
   display: flex;
-  align-items: flex-end;
+  position: absolute;
+  top: 0.1rem;
+  right: 1rem;
+  text-align: end;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: rgb(255, 68, 230);
 }
